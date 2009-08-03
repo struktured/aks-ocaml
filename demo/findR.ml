@@ -1,3 +1,4 @@
+(* return the size of a decimal to base 2 *)
 let rec base2size n size =
 	if n < 2
 	then (size+1)
@@ -5,6 +6,7 @@ let rec base2size n size =
 	base2size (n/2) (size+1)
 	;;
 
+(* convert dec (int) to bin (string) *)
 let rec dec2bin n s=
 	if n < 2
 	then Printf.sprintf "1" ^ s
