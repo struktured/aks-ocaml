@@ -16,7 +16,7 @@ let rec euler lst s =
   | [] -> s
   | head :: tail -> euler tail (s *. (1. -. (1. /. (float_of_int head))))
   
-(* the "main" function of the euler's totient-function *)
+(* the "main" function of euler's totient-function *)
 let euler_totient n =
   let factorLst = factors n 2 []
   in
