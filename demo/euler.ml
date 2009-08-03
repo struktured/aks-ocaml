@@ -22,4 +22,3 @@ let euler_totient n =
   in
     (* List.iter (fun v -> Printf.printf "%d::" v) factorLst; *)
     int_of_float ((float_of_int n) *. (euler factorLst 1.))
-  
