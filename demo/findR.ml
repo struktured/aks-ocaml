@@ -15,3 +15,25 @@ let rec dec2bin n s=
 		| 0 -> dec2bin (n/2) (Printf.sprintf "0" ^ s)
 		| _ -> dec2bin (n/2) (Printf.sprintf "1" ^ s)
 ;;
+
+(* calculate x^n mod r *)
+let rec pow_mod n x r =
+    if n=0 then 1 else (x * pow_mod (n-1)(x) r) mod r ;;
+
+
+let getPrimeAt x =
+	x
+	;;
+
+let rec check limit x =
+	match limit > x with
+		| true -> 
+			| _ -> check limit (x+1)
+
+let rec proof n r x =
+ match n > r with
+	| true -> 
+		let nextPrime = getPrimeat (x+1) in
+		| _ -> 
+	
+ 
