@@ -21,9 +21,15 @@ let rec pow_mod n x r =
     if n=0 then 1 else (x * pow_mod (n-1)(x) r) mod r ;;
 
 
-let getPrimeAt x =
-	x
-	;;
+(* return the n-th prime number *)
+ let rec getPrimeAt n x ps =
+    if(List.length ps = n) then (List.hd ps) else
+    if(List.exists (fun y->(x mod y=0)) ps)
+    then getPrimeAt n (x+1) ps
+    else getPrimeAt n (x+1) (x::ps)
+;;
+
+
 
 let rec check limit x =
 	match limit > x with
