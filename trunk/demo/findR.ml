@@ -13,6 +13,7 @@ let rec dec2bin n s =
      | 0 -> dec2bin (n / 2) ((Printf.sprintf "0") ^ s)
      | _ -> dec2bin (n / 2) ((Printf.sprintf "1") ^ s))
   
+	
 (* calculate x^n mod r *)
 let rec pow_mod n x r =
   match n with 
